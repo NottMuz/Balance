@@ -9,15 +9,15 @@ long returntime, distmm, dist5, dist4, dist3, dist2, dist1, avgdist = 0; //Defin
 Servo myservo; //name the serve 'myservo'
 
 
-////////////////////////Variables///////////////////////
+/////Variables
 float distance = 0.0; //total distance from end to end
 float elapsedTime, rtime, timePrev;        //Variables for time control
 float distance_previous_error, distance_error; //distance error variables
 int period = 40;  //Refresh rate period of the loop is 50ms
-///////////////////////////////////////////////////////
+/////
 
 
-///////////////////PID constants///////////////////////
+/////PID constants
 float kp = 1.6; //1.2-1.9 Working value: 1.6
 float ki = 0.044; //0.04 to 0.06 Working value: 0.044
 float kd = 210; //190 - 230 Working value: 210
@@ -39,8 +39,7 @@ rtime = millis(); //starts timer, stores it in millis()
 
 
 void loop() {
-  // put your main code here, to run repeatedly:
-  
+
 //stores last 5 distances of cart, averages them for more accurate result
 dist1 = distmm;
 dist2 = dist1;
